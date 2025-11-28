@@ -6,7 +6,7 @@ by maximizing weighted coverage of demand points (bus stops, hospitals, shops, S
 
 Configuration is loaded from config.csv file.
 
-This code was written with the help of Anthropic's Claude.
+This code was written with the help of Anthropic's Claude, in particular the use of cKDTree.
 """
 
 import csv
