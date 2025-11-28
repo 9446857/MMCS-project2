@@ -3,8 +3,7 @@
 Bike Station MCLP with Weight Sensitivity Analysis
 
 This script finds optimal locations for new bike-sharing stations in Edinburgh
-by maximizing coverage of demand points (bus stops, hospitals, shops, SIMD areas, etc.)
-within service radii, while accounting for station costs.
+by maximizing weighted coverage of demand points (bus stops, hospitals, shops, SIMD areas, etc.) prioritising transport demand points, within service radii, while accounting for station costs.
 
 Configuration is now loaded from config.csv file.
 """
@@ -25,7 +24,7 @@ import matplotlib.pyplot as plt
 # =============================================================================
 
 def load_config_csv(config_file='config.csv'):
-    """Load configuration from CSV file."""
+    """Load configuration file which contains the parameter values."""
     print(f"Loading configuration from {config_file}...")
     
     config = {
@@ -48,7 +47,7 @@ def load_config_csv(config_file='config.csv'):
                 param = row['parameter']
                 value = row['value']
                 
-                # Parse values based on section
+                # load the values for each parameter
                 if section == 'optimization':
                     if param in ['n_stations', 'min_distance_between_stations']:
                         config['optimization_parameters'][param] = int(value)

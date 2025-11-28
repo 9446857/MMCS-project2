@@ -3,11 +3,11 @@ optimization,n_stations,50,Number of new bike stations to place
 optimization,min_distance_between_stations,300,Minimum distance between stations (meters)
 optimization,grid_resolution,0.0007,Grid resolution for candidate locations (degrees ~80m)
 optimization,station_cost,25.0,Cost per station (welfare units)
-analysis,run_sensitivity_analysis,True,Set to True to run weight sensitivity analysis
-analysis,run_pareto_front_analysis,False,Set to True to run Pareto front analysis
+analysis,run_sensitivity_analysis,False,Set to True to run weight sensitivity analysis
+analysis,run_pareto_front_analysis,True,Set to True to run Pareto front analysis
 sensitivity,weight_multipliers,0.25;0.5;0.75;1.0;1.5;2.0;3.0;4.0,Weight multipliers to test (semicolon separated)
 sensitivity,demand_types_to_test,bus_stop;tram_stop;train_station;park_ride;hospital;school;library;university;shop_cluster;simd_area,Demand types to test in sensitivity analysis (semicolon separated)
-pareto,n_stations_range,20;25;30;35;40;45;50;55;60;65;70;75;80,Range of station counts to test (semicolon separated)
+pareto,n_stations_range,20;30;40;50;60;70;80,Range of station counts to test (semicolon separated)
 service_radius,bus_stop,50,Service radius in meters
 service_radius,tram_stop,100,Service radius in meters
 service_radius,train_station,200,Service radius in meters
@@ -33,7 +33,7 @@ demand_weight,shop_cluster,2,Importance weight for demand point
 demand_weight,cycle_network_point,1,Importance weight for demand point
 demand_weight,quiet_route_point,1,Importance weight for demand point
 demand_weight,airport,100,Importance weight for demand point
-demand_weight,simd_area,0,Importance weight for demand point
+demand_weight,simd_area,15,Importance weight for demand point
 data_file,boundary,data/Edinburgh_Boundary_Coordinates.csv,Path to boundary coordinates file
 data_file,city_centre,data/city_centre.csv,Path to city centre coordinates file
 data_file,transport_locations,data/transport_locations.csv,"Combined transport locations (bus, tram, train, park_n_ride, airport)"
