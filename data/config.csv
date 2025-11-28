@@ -1,0 +1,47 @@
+section,parameter,value,description
+optimization,n_stations,50,Number of new bike stations to place
+optimization,min_distance_between_stations,300,Minimum distance between stations (meters)
+optimization,grid_resolution,0.0007,Grid resolution for candidate locations (degrees ~80m)
+optimization,bike_cost,25.0,Cost per station (welfare units)
+analysis,run_sensitivity_analysis,False,Set to True to run weight sensitivity analysis
+analysis,run_pareto_front_analysis,False,Set to True to run Pareto front analysis
+sensitivity,weight_multipliers,0.25;0.5;1.0;2.0;4.0,Weight multipliers to test (semicolon separated)
+sensitivity,demand_types_to_test,bus_stop;tram_stop;train_station;park_ride;hospital;school;library;university;shop_cluster;simd_area,Demand types to test in sensitivity analysis (semicolon separated)
+pareto,n_stations_range,20;30;40;50;60;70;80,Range of station counts to test (semicolon separated)
+pareto,bike_cost_range,10.0;15.0;20.0;25.0;30.0;40.0;50.0,Range of bike costs to test (semicolon separated)
+service_radius,bus_stop,50,Service radius in meters
+service_radius,tram_stop,50,Service radius in meters
+service_radius,train_station,200,Service radius in meters
+service_radius,park_ride,200,Service radius in meters
+service_radius,hospital,200,Service radius in meters
+service_radius,school,200,Service radius in meters
+service_radius,library,200,Service radius in meters
+service_radius,university,200,Service radius in meters
+service_radius,shop_cluster,200,Service radius in meters
+service_radius,cycle_network_point,100,Service radius in meters
+service_radius,quiet_route_point,100,Service radius in meters
+service_radius,airport,300,Service radius in meters
+service_radius,simd_area,200,Service radius in meters
+demand_weight,bus_stop,1,Importance weight for demand point
+demand_weight,tram_stop,2,Importance weight for demand point
+demand_weight,train_station,50,Importance weight for demand point
+demand_weight,park_ride,80,Importance weight for demand point
+demand_weight,hospital,80,Importance weight for demand point
+demand_weight,school,3,Importance weight for demand point
+demand_weight,library,2,Importance weight for demand point
+demand_weight,university,20,Importance weight for demand point
+demand_weight,shop_cluster,2,Importance weight for demand point
+demand_weight,cycle_network_point,1,Importance weight for demand point
+demand_weight,quiet_route_point,1,Importance weight for demand point
+demand_weight,airport,100,Importance weight for demand point
+demand_weight,simd_area,0,Importance weight for demand point
+data_file,boundary,data/Edinburgh_Boundary_Coordinates.csv,Path to boundary coordinates file
+data_file,city_centre,data/city_centre.csv,Path to city centre coordinates file
+data_file,transport_locations,data/transport_locations.csv,"Combined transport locations (bus, tram, train, park_n_ride, airport)"
+data_file,pois,data/edinburgh_pois_without_residential_commercial.csv,Path to points of interest file
+data_file,shops,data/edinburgh_shops_coordinates.csv,Path to shops file
+data_file,cycle_routes,data/cycle_and_quiet_routes.csv,Combined cycling routes (cycle_route and quiet_route)
+data_file,simd_areas,data/simd2020_bottom20_Edinburgh.csv,Path to SIMD areas file
+data_file,map_limits,data/map_limits.csv,Path to map limits file
+shop_clustering,min_shops,3,Minimum number of shops to form a cluster
+shop_clustering,max_distance,200,Maximum distance for shop clustering (meters)
