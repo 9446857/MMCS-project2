@@ -1,11 +1,12 @@
-#!/usr/bin/env python3
 """
 Bike Station MCLP with Weight Sensitivity Analysis
 
 This script finds optimal locations for new bike-sharing stations in Edinburgh
 by maximizing weighted coverage of demand points (bus stops, hospitals, shops, SIMD areas, etc.) prioritising transport demand points, within service radii, while accounting for station costs.
 
-Configuration is now loaded from config.csv file.
+Configuration is loaded from config.csv file.
+
+This code was written with the help of Anthropic's Claude.
 """
 
 import csv
